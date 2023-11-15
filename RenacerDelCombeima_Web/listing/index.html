@@ -62,38 +62,133 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
-	<body>
-		<div id="fh5co-wrapper">
-		<div id="fh5co-page">
-		<div id="fh5co-header">
-			<header id="fh5co-header-section">
-				<div class="container"style="background-color: darkolivegreen; width: 100%; position: fixed; z-index: 100;">
-					<div class="nav-header"style="text-align: justify;">
-						<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-						<h1 id="fh5co-logo"><a href="index.html"  >Renacer del combeima</a></h1> 
-						<!-- START #fh5co-menu-wrap -->
-						<nav id="fh5co-menu-wrap" role="navigation">
-							<ul class="sf-menu" id="fh5co-primary-menu">
-								<li>
-									<a href="index.html">Home</a>
-								</li>
-								<li class="active">
-									<a href="listing.html" class="fh5co-sub-ddown">Actividades turisticas</a>
-									<ul class="fh5co-sub-menu">
-										<li><a href="#">Caminata ecologica</a></li>
-										<li><a href="#">Camping</a></li>
-										<li><a href="#">Jacuzzi rejuvenecedor</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#" class="fh5co-sub-ddown">Servicios</a>
-									 <ul class="fh5co-sub-menu">
-										<li><a href="#">Hospedaje</a></li>
-										<li><a href="#">Fiestas de cumpleaños</a></li>
-										<li><a href="#">Eventos empresariales</a></li> 
-									</ul>
-								</li>
+	
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Interactivo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #fh5co-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #fh5co-header-section {
+      background-color: darkolivegreen;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      text-align: center;
+    }
+
+    #fh5co-logo {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .fh5co-sub-menu {
+      display: none;
+      list-style: none;
+      padding: 0;
+    }
+
+    .fh5co-sub-menu.active {
+      display: block;
+    }
+
+    .fh5co-nav-toggle {
+      cursor: pointer;
+    }
+
+    .sf-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .sf-menu li {
+      margin: 0 20px;
+    }
+
+    .sf-menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .sf-menu a:hover {
+      color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <div id="fh5co-wrapper">
+    <div id="fh5co-page">
+      <div id="fh5co-header">
+        <header id="fh5co-header-section">
+          <div class="container">
+            <div class="nav-header">
+              <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+              <h1 id="fh5co-logo"><a href="index.html">Renacer del Combeima</a></h1>
+              <nav id="fh5co-menu-wrap" role="navigation">
+                <ul class="sf-menu" id="fh5co-primary-menu">
+                  <li>
+                    <a href="index.html">Home</a>
+                  </li>
+                  <li class="fh5co-sub-ddown">
+                    <a href="#" onclick="toggleSubMenu('actividadesSubMenu')">Actividades turisticas</a>
+                    <ul class="fh5co-sub-menu" id="actividadesSubMenu">
+                      <li><a href="#">Caminata ecologica</a></li>
+                      <li><a href="#">Camping</a></li>
+                      <li><a href="#">Jacuzzi rejuvenecedor</a></li>
+					</ul>
+				</li>
+				<li>
+				  <li class="fh5co-sub-ddown">
+					<a href="#" onclick="toggleSubMenu('actividadesSubMenu')">Servicios</a>
+					<ul class="fh5co-sub-menu" id="serviciosSubMenu">
+						<li><a href="#">Hospedjae</a></li>
+						<li><a href="#">Fiestas de Cumpleaños</a></li>
+						<li><a href="#">Eventos Empresariales</a></li>
+					</ul>
+				</li>
+				<li>
+                    <a href="#" onclick="showMessage('Haz clic en Otro')">Reserva</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </header>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleSubMenu(subMenuId) {
+      var subMenu = document.getElementById(subMenuId);
+      subMenu.classList.toggle('active');
+    }
+
+    function showMessage(message) {
+      alert(message);
+    }
+  </script>
+</body>
+</html>
+
+									
 								<li><a href="contact.html">contactanos</a></li>
 							</ul>
 						</nav>
@@ -174,7 +269,7 @@
 								<a href="#"><i class="icon-dribbble2"></i></a>
 								<a href="#"><i class="icon-youtube"></i></a>
 							</p>
-							<p>Copyright Renacer del Combeima me la pelas</p>
+							<p>Copyright Renacer del Combeima 2023</p>
 						</div>
 					</div>
 				</div>
